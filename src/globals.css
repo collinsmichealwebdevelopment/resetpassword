@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border list-none p-0 m-0 scroll-smooth;
+  }
+
+  body {
+    @apply bg-dark-1 text-white min-h-screen font-inter;
+  }
+}
+
+@layer utilities {
+  .h2-bold {
+    @apply text-[30px] font-bold leading-[140%] tracking-tighter;
+  }
+
+  .h3-bold {
+    @apply text-[24px] font-bold leading-[140%] tracking-tighter;
+  }
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+
+  .flex-between {
+    @apply flex justify-between items-center;
+  }
+
+  .flex-start {
+    @apply flex justify-start items-center;
+  }
+}
+
+@layer components {
+  /* SHADCN COMPONENTS */
+  /* Form */
+  .shad-form_label {
+    @apply text-white !important;
+  }
+
+  .shad-form_message {
+    @apply text-red !important;
+  }
+
+  .shad-input {
+    @apply h-12 bg-dark-4 border-none placeholder:text-light-4 focus-visible:ring-1 focus-visible:ring-offset-1 ring-offset-light-3 !important;
+  }
+
+  .shad-textarea {
+    @apply h-36 bg-dark-3 rounded-xl border-none focus-visible:ring-1 focus-visible:ring-offset-1 ring-offset-light-3 !important;
+  }
+
+  /* Button */
+  .shad-button_primary {
+    @apply bg-primary-500 hover:bg-primary-500 text-light-1 px-5 h-12 flex gap-2 !important;
+  }
+
+  .shad-button_dark_4 {
+    @apply h-12 bg-dark-4 px-5 text-light-1 flex gap-2 !important;
+  }
+
+  .shad-button_ghost {
+    @apply flex gap-4 items-center justify-start hover:bg-transparent hover:text-white !important;
+  }
+}
